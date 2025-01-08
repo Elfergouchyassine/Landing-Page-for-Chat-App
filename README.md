@@ -1,11 +1,24 @@
-# Landing Page built with React and Tailwind CSS
+# Landing Page for Chat App (ChatConn)
 
-<img width="80%" src="./src/assets/images/preview.png" alt="landing page" />
+This is a landing page for the ChatConn chat application, built using React and Tailwind CSS.
 
-<br/>
+## Installation
 
-A landing page built with React.js and Tailwind CSS.
+To get started with this project, follow these steps:
 
-Fully responsible to any screen sizes.
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/elfergouchyassinetailwind-landing-page.git
+   cd tailwind-landing-page
+    ```
 
-https://tailwind-landing-page-danielkim2711.vercel.app
+## Change the env variables
+
+Define the following enviroment variables in a .env file
+
+
+   ```sh
+   REACT_APP_EMAILJS_USER_ID=your_emailjs_user_id
+REACT_APP_EMAILJS_SERVICE_ID=your_emailjs_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+    ```

@@ -1,44 +1,32 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import companyLogo from '../assets/images/logo.svg';
+import companyLogo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className='relative container mx-auto p-6'>
+    <nav className='relative bg-orange-500 w-full'>
       {/* Flex Container */}
-      <div className='flex items-center justify-between'>
-        {/* Logo */}
-        <div className='pt-2'>
-          <img src={companyLogo} alt='' />
+      <div className='container flex items-center justify-between mx-auto p-6'>
+        {/* Logo and Title */}
+        <div className='flex items-center space-x-2 pt-2'>
+          <img src={companyLogo} alt='Company Logo' className='h-8' /> {/* Adjust the height to make the logo smaller */}
+          <span className='text-white text-2xl font-bold'>ChatConn</span> {/* Add "Conn" to "Chat" */}
         </div>
         {/* Menu Items */}
         <div className='hidden space-x-6 md:flex'>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Pricing
-          </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Product
-          </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            About Us
-          </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Careers
-          </Link>
-          <Link to='#' className='hover:text-darkGrayishBlue'>
-            Community
-          </Link>
+          <a href='#hero' className='hover:text-darkGrayishBlue'>
+            Home
+          </a>
+          <a href='#features' className='hover:text-darkGrayishBlue'>
+            Features
+          </a>
+          <a href='#cta' className='hover:text-darkGrayishBlue'>
+            Contact Us
+          </a>
         </div>
-        {/* Button */}
-        <Link
-          to='#'
-          className='hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block'
-        >
-          Get Started
-        </Link>
 
         {/* Hamburger Icon */}
         <button
@@ -49,9 +37,9 @@ const Navbar = () => {
           }
           onClick={() => setToggleMenu(!toggleMenu)}
         >
-          <span className='hamburger-top'></span>
-          <span className='hamburger-middle'></span>
-          <span className='hamburger-bottom'></span>
+          <span className='hamburger-top bg-white'></span>
+          <span className='hamburger-middle bg-white'></span>
+          <span className='hamburger-bottom bg-white'></span>
         </button>
       </div>
 
@@ -64,11 +52,9 @@ const Navbar = () => {
               : 'absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'
           }
         >
-          <Link to='#'>Pricing</Link>
-          <Link to='#'>Product</Link>
-          <Link to='#'>About Us</Link>
-          <Link to='#'>Careers</Link>
-          <Link to='#'>Community</Link>
+          <a href='#hero'>Home</a>
+          <a href='#features'>Features</a>
+          <a href='#cta'>Contact Us</a>
         </div>
       </div>
     </nav>

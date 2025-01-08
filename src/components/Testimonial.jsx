@@ -1,50 +1,54 @@
 import { Link } from 'react-router-dom';
 
-import avatarAnisha from '../assets/images/avatar-anisha.png';
-import avatarAli from '../assets/images/avatar-ali.png';
-import avatarRichard from '../assets/images/avatar-richard.png';
+import reactLogo from '../assets/images/React-icon.svg.png';
+import expresslogo from '../assets/images/expresslogo.png';
+import nodejs from '../assets/images/nodejslogo.png';
+import mongodblogo from '../assets/images/mongodblogo.png';
 
 const Testimonial = () => {
   return (
-    <section id='testimonials'>
+    <section id='features'>
       {/* Container to heading and testm blocks */}
       <div className='max-w-6xl px-5 mx-auto mt-32 text-center'>
         {/* Heading */}
         <h2 className='text-4xl font-bold text-center'>
-          What's Different About Manage?
+          Features
         </h2>
-        {/* Testimonials Container */}
+        {/* Cards Container */}
         <div className='flex flex-col mt-24 md:flex-row md:space-x-6'>
-          {/* Testimonial 1 */}
+          {/* Card 1 */}
           <div className='flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3'>
-            <img src={avatarAnisha} className='w-16 -mt-14' alt='' />
-            <h5 className='text-lg font-bold'>Anisha Li</h5>
+            <img src={reactLogo} className='w-16 -mt-14' alt='' />
+            <h5 className='text-lg font-bold'>React</h5>
             <p className='text-sm text-darkGrayishBlue'>
-              “Manage has supercharged our team's workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
+              React is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more "seamless".
             </p>
           </div>
 
-          {/* Testimonial 2 */}
+          {/* Card 2 */}
           <div className='hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3'>
-            <img src={avatarAli} className='w-16 -mt-14' alt='' />
-            <h5 className='text-lg font-bold'>Ali Bravo</h5>
+            <img src={expresslogo} className='w-16 -mt-14' alt='' />
+            <h5 className='text-lg font-bold'>ExpressJS</h5>
             <p className='text-sm text-darkGrayishBlue'>
-              “We have been able to cancel so many other subscriptions since
-              using Manage. There is no more cross-channel confusion and
-              everyone is much more focused.”
+              ExpressJS a back end web application framework for building RESTful APIs with Node. js
             </p>
           </div>
 
-          {/* Testimonial 3 */}
+          {/* Card 3 */}
           <div className='hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3'>
-            <img src={avatarRichard} className='w-16 -mt-14' alt='' />
-            <h5 className='text-lg font-bold'>Richard Watts</h5>
+            <img src={nodejs} className='w-16 -mt-14' alt='' />
+            <h5 className='text-lg font-bold'>NodeJS</h5>
             <p className='text-sm text-darkGrayishBlue'>
-              “Manage has supercharged our team's workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
+              Node.js is an open-source and cross-platform JavaScript runtime environment.
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className='hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3'>
+            <img src={mongodblogo} className='w-16 -mt-14' alt='' />
+            <h5 className='text-lg font-bold'>MongoDB</h5>
+            <p className='text-sm text-darkGrayishBlue'>
+              MongoDB is a non-relational document database that provides support for JSON-like storage.
             </p>
           </div>
         </div>
@@ -52,7 +56,7 @@ const Testimonial = () => {
         <div className='my-16'>
           <Link
             to='#'
-            className='p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight'
+            className='p-3 px-6 pt-2 text-white bg-orange-500 rounded-full baseline hover:bg-orange-600'
           >
             Get Started
           </Link>
